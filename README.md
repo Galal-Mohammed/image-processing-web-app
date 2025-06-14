@@ -1,64 +1,83 @@
-# Image Processing Web App
+# Image Processing Web Application
 
-This is an image processing web application that allows users to resize and upload images. The app consists of a backend API built with Express.js and a frontend user interface implemented using HTML, CSS, and JavaScript.
+This project is a full-stack web application that enables users to **upload** and **resize JPG/JPEG images**. It features a **backend API** built with **Express.js** and a **frontend interface** using **HTML, CSS, and JavaScript**.
 
-## Features
+---
 
-View a gallery of available images
-Resize images by specifying custom width and height
-Upload new images in JPG or JPEG format
-Backend API for image processing and serving resized images
-Frontend user interface for interacting with the API
+## 🚀 Features
 
-## Installation
+- Browse a gallery of available images  
+- Resize images by specifying custom dimensions  
+- Upload JPG or JPEG images  
+- API endpoints for image manipulation and retrieval  
+- Simple, responsive frontend to interact with the backend
 
-Clone the repository:
-`git clone https://github.com/Dhadhazi/Image-Processing-Web-App.git`
+---
 
-Navigate to the project directory:
-`cd image-processing-web-app`
+## 🛠️ Getting Started
 
-Install the dependencies:
-`npm install`
+### Installation Steps
 
-Start the development server:
-`npm start`
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Dhadhazi/Image-Processing-Web-App.git
+   ```
 
-Open your web browser and visit http://localhost:8000 to access the application, or open the html file in the /public folder
+2. **Navigate into the project directory:**
+   ```bash
+   cd image-processing-web-app
+   ```
 
-## Usage for /public
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Viewing Images
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-- The home page displays a gallery of available images.
-- Click on an image to select it for resizing.
+5. **Access the app:**
 
-Resizing Images
+   - Visit `http://localhost:8000` in your browser
+   - Or simply open the `index.html` file inside the `/public` folder
 
-- Select an image from the gallery or the dropdown menu.
-- Enter the desired width and height for the resized image.
-- Click the "Resize" button to generate the resized image.
+---
+
+## 💻 Frontend Usage (`/public` Folder)
+
+### Viewing Images
+- The home page displays a gallery of existing images.
+- Click on any image to select it for resizing.
+
+### Resizing Images
+- Choose an image from the dropdown list.
+- Enter the target width and height.
+- Click **"Resize"** to create a resized version.
 - The URL of the resized image will be displayed below the form.
 
-Uploading Images
+### Uploading Images
+- Click **"Choose File"** and select a `.jpg` or `.jpeg` image.
+- Press **"Upload"** to send the image to the server.
+- The uploaded image will appear in the gallery and become resizable.
 
-- Click on the "Choose File" button in the upload section.
-- Select a JPG or JPEG image file from your local machine.
-- Click the "Upload" button to upload the image to the server.
-- The uploaded image will be added to the gallery and available for resizing.
+---
 
-API Endpoints
+## 📡 API Endpoints
 
-- GET /images: Retrieves a list of available images.
-- GET /images/:imageName: Retrieves a specific image by name.
-  - Query parameters:
-    - w: Width of the resized image (optional)
-    - h: Height of the resized image (optional)
-  - Example: http://localhost:8000/images/fjord.jpg?w=200&h=800
-- POST /upload: Uploads a new image file.
+| Endpoint | Description |
+|----------|-------------|
+| `GET /images` | List all available images |
+| `GET /images/:imageName` | Retrieve an image (optionally resized) |
+| &nbsp;&nbsp;&nbsp;&nbsp;Query Parameters | `w` = width (optional), `h` = height (optional) |
+| Example | `http://localhost:8000/images/fjord.jpg?w=200&h=800` |
+| `POST /upload` | Upload a new image file |
 
-## Project Structure
-The project structure is organized as follows:
+---
+
+## 📁 Project Structure
+
 ```
 ├── src/
 │   ├── controllers/
@@ -70,12 +89,7 @@ The project structure is organized as follows:
 │   │   └── thumbnails/
 │   ├── tests/
 │   │   ├── helpers/
-│   │   ├── ImagesController.test.ts
-│   │   ├── IndexController.test.ts
-│   │   ├── UploadController.test.ts
-│   │   ├── UtilFileExist.test.ts
-│   │   ├── UtilGenerateFileName.test.ts
-│   │   └── UtilResizeImage.test.ts
+│   │   ├── *.test.ts
 │   ├── utils/
 │   │   ├── fileExist.ts
 │   │   ├── generateFileName.ts
@@ -91,24 +105,23 @@ The project structure is organized as follows:
 ├── package.json
 └── README.md
 ```
-- The `src` directory contains the backend source code.
-  - The `controllers` directory contains the route handlers for different endpoints.
-  - The `images` directory stores the original and resized images.
-  - The `tests` directory contains the unit tests for the backend code.
-  - The `utils` directory contains utility functions used in the backend.
-  - `app.ts` is the main entry point for the Express application.
-  - `config.ts` contains configuration variables for the backend.
-  - `index.ts` is the entry point for the server.
-  - `routes.ts` defines the API routes and their corresponding controllers.
 
-- The `public` directory contains the frontend files.
-  - `index.html` is the main HTML file for the frontend.
-  - `script.js` contains the JavaScript code for the frontend functionality.
-  - `style.css` contains the CSS styles for the frontend.
+### Folder Explanation
 
-- `package.json` contains the project dependencies and scripts.
-- `README.md` is the project documentation file.
+- `src/` - Contains backend source files
+  - `controllers/` - Request handlers for the API
+  - `images/` - Image storage (original and resized)
+  - `utils/` - Shared helper functions
+  - `tests/` - Unit tests for backend logic
+  - `app.ts` - Main Express app
+  - `routes.ts` - API route definitions
+- `public/` - Contains all frontend code (HTML, CSS, JS)
+- `package.json` - Lists dependencies and scripts
+- `README.md` - Documentation
 
-## License
+---
 
-This project is licensed under the MIT License.
+## 📝 License
+
+This project is released under the **MIT License**.  
+Feel free to use, modify, and share with attribution.

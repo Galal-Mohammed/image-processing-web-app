@@ -16,3 +16,10 @@ describe('resizeImage utility creates the file', () => {
     expect(fileExist(fileToCheck)).toBe(true);
   });
 });
+
+
+describe('Simple test check', () => {
+  it('should pass this test', () => {
+    expect(true).toBe(true);
+  });
+});

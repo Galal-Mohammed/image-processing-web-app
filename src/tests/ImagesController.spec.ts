@@ -16,7 +16,7 @@ describe('GET /images/doesnotexist route', () => {
   it('Should return status code 404 and message', async () => {
     const result = await request(app).get('/images/doesnotexist').send();
     expect(result.status).toBe(404);
-    expect(result.text).toBe('Image failed to process: base file does not exists');
+    expect(result.text).toBe('Image failed to process: base file does not exist.');
   });
 });
 

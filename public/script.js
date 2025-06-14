@@ -5,7 +5,6 @@ const resizedUrl = document.querySelector('.resized-url');
 const uploadForm = document.querySelector('.upload-form form');
 const uploadMessage = document.querySelector('.upload-message');
 
-// Fetch available images and display them in the gallery
 async function fetchImages() {
   try {
     const response = await fetch('http://localhost:8000/images');
@@ -28,7 +27,6 @@ async function fetchImages() {
   }
 }
 
-// Handle resize form submission
 async function handleResize(event) {
   event.preventDefault();
   const imageName = imageSelect.value;
@@ -38,7 +36,6 @@ async function handleResize(event) {
   resizedUrl.innerHTML = `Resized image URL: <a href="${url}" target="_blank">${url}</a>`;
 }
 
-// Handle upload form submission
 async function handleUpload(event) {
   event.preventDefault();
 

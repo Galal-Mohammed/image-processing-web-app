@@ -16,14 +16,12 @@ describe('POST /upload', () => {
   });
 
   it('Should successfully upload an image and return status 200', async () => {
-    const response = await request(app)
-      .post('/upload')
-      .attach('image', tempPath);
+    const response = await request(app).post('/upload').attach('image', tempPath);
     expect(response.status).toBe(200);
   });
 
   it('Should return error when no image is uploaded', async () => {
     const response = await request(app).post('/upload');
-    expect(response.status).toBe(400); 
+    expect(response.status).toBe(400);
   });
 });

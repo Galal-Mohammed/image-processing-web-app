@@ -17,7 +17,6 @@ describe('resizeImage utility creates the file', () => {
   });
 });
 
-
 describe('Simple test check', () => {
   it('should pass this test', () => {
     expect(true).toBe(true);

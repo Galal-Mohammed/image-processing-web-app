@@ -20,7 +20,7 @@ This project is a full-stack web application that enables users to **upload** an
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Dhadhazi/Image-Processing-Web-App.git
+   git clone https://github.com/Galal-Mohammed/image-processing-web-app.git
    ```
 
 2. **Navigate into the project directory:**
